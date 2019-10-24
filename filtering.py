@@ -1,4 +1,4 @@
-from strings import checks_in_string
+from general import checks_in_string
 
 
 def _remove_mode_both(string_to_check, inclusions, exclusions):
