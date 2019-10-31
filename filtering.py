@@ -1,4 +1,4 @@
-from general import checks_in_string
+from .general import checks_in_string
 
 
 def _remove_mode_both(string_to_check, inclusions, exclusions):
@@ -64,7 +64,7 @@ def filter_strings(
     check_function = _get_valid_remove_mode(mode)
 
     output_list = []
-    for file_name in input_list:
-        if check_function(file_name, inclusions, exclusions):
-            output_list.append(file_name)
+    for string in input_list:
+        if check_function(string, inclusions, exclusions):
+            output_list.append(string)
     return output_list
